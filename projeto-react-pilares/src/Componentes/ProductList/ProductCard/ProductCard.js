@@ -1,3 +1,3 @@
-export const Main = () => {
-  return "Aqui vai ser aos produtos";
+export const ProductCard = () => {
+  return <p>"ProductCard"</p>;
 };
