@@ -1,3 +1,9 @@
+import { HeaderContainer } from "./headerStyle";
+
 export const Header = () => {
-  return <p>"Header</p>;
+  return (
+    <HeaderContainer>
+      <h1>Space T</h1>
+    </HeaderContainer>
+  );
 };
