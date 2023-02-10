@@ -1,3 +1,4 @@
+import React from "react";
 import { FilterContainer, Input, CamposDeBusca } from "./filterStyle";
 
 export const Filters = ({
@@ -12,9 +13,6 @@ export const Filters = ({
   const handleName = (e) => {
     setNameFilter(e.target.value);
   };
-
-  //Função que captura o valor do preço (dentro do onChange)
-  // (e) => setPriceFilter(e.target.value)
 
   return (
     <FilterContainer>

@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { Card, Imagem, Informacao, Botao, Chave } from "./productCardStyle";
 

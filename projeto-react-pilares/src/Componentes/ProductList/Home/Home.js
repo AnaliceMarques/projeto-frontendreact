@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { ProductCard } from "../ProductCard/ProductCard";
 import { HomeContainer, Select, Info, Cards } from "./homeStyle";
