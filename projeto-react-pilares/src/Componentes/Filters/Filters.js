@@ -1,4 +1,5 @@
-import { FilterContainer, Input } from "./filterStyle";
+import React from "react";
+import { FilterContainer, Input, CamposDeBusca } from "./filterStyle";
 
 export const Filters = ({
   nameFilter,
@@ -13,27 +14,10 @@ export const Filters = ({
     setNameFilter(e.target.value);
   };
 
-  //Função que captura o valor do preço (dentro do onChange)
-  // (e) => setPriceFilter(e.target.value)
-
   return (
     <FilterContainer>
-      <nav>
-        <h2>Filtros</h2>
-        <br />
-        <label htmlFor="nome">
-          Buscar por Nome:
-          <br />
-          <Input
-            type="text"
-            id="nome"
-            name="nome"
-            placeholder="Digite um nome"
-            value={nameFilter}
-            onChange={handleName}
-          />
-        </label>
-
+      <h2>Filtros</h2>
+      <CamposDeBusca>
         <p>
           <label htmlFor="minimo">
             Valor Mínimo:
@@ -62,7 +46,21 @@ export const Filters = ({
             />
           </label>
         </p>
-      </nav>
+        <p>
+          <label htmlFor="nome">
+            Buscar por Nome:
+            <br />
+            <Input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite um nome"
+              value={nameFilter}
+              onChange={handleName}
+            />
+          </label>
+        </p>
+      </CamposDeBusca>
     </FilterContainer>
   );
 };

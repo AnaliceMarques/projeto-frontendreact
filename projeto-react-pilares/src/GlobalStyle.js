@@ -9,13 +9,8 @@ export const GlobalStyle = createGlobalStyle`
         --deep-blue: #1a2965;
         --deep-blue-secondary: #051937;
     }
-
-    h1 {
-        font-family: 'Space Mono', monospace;
-        color: var(--soft-white)
-    }
-  
-    h2, h3{
+ 
+    h1, h2, h3{
         font-family: 'Trispace', sans-serif;
         color: var(--soft-white)
     }
@@ -23,8 +18,8 @@ export const GlobalStyle = createGlobalStyle`
     body{
         font-family: 'Roboto', sans-serif;
         background-image: linear-gradient(to right bottom, var(--deep-blue-secondary), var(--deep-blue), var(--blue-purple), var(--purple), var(--magenta));
-        color: var(--soft-white)
-    }
+        color: var(--soft-white);
+         }
 
 *{
     margin:0;
