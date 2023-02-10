@@ -7,10 +7,10 @@ import {
   Quantidade,
   Contador,
   BotaoContador,
+  Total,
 } from "./cartStyle";
 
-export const Cart = ({ cart, setCart, amount, setAmount }) => {
-  //função para calcular o valor total
+export const Cart = ({ cart, setCart }) => {
   const calcValorTotal = () => {
     return cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
   };
@@ -24,7 +24,13 @@ export const Cart = ({ cart, setCart, amount, setAmount }) => {
   const adicionarUm = (id) => {
     const novoArray = cart.map((item) => {
       if (item.id === id) {
-        item.quantity = item.quantity + 1;
+        if (item.quantity === item.seats) {
+          alert(
+            "Quantidade máxima atingida! Não é mais possível adicionar este item ao carrinho."
+          );
+        } else {
+          item.quantity = item.quantity + 1;
+        }
       }
       return item;
     });
@@ -102,13 +108,13 @@ export const Cart = ({ cart, setCart, amount, setAmount }) => {
         </div>
       ))}
 
-      <span>
+      <Total>
         Total:{" "}
         {calcValorTotal().toLocaleString("pt-br", {
           style: "currency",
           currency: "BRL",
         })}
-      </span>
+      </Total>
     </CartContainer>
   );
 };

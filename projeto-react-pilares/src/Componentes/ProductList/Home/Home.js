@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { ProductCard } from "../ProductCard/ProductCard";
-import { HomeContainer, Ordenacao, Select } from "./homeStyle";
+import { HomeContainer, Select, Info, Cards } from "./homeStyle";
 
 export const Home = ({
   productsList,
   nameFilter,
   minPriceFilter,
   maxPriceFilter,
-  amount,
-  setAmount,
   cart,
   setCart,
 }) => {
@@ -22,7 +20,13 @@ export const Home = ({
     if (existeProdutoCart) {
       const novoArray = cart.map((item) => {
         if (item.id === produto.id) {
-          item.quantity = item.quantity + 1;
+          if (item.quantity === item.seats) {
+            alert(
+              "Quantidade máxima atingida! Não é mais possível adicionar este item ao carrinho."
+            );
+          } else {
+            item.quantity = item.quantity + 1;
+          }
         }
         return item;
       });
@@ -97,18 +101,22 @@ export const Home = ({
 
   return (
     <HomeContainer>
-      <p>Quantidade de produtos: {renderizaNaTela().length}</p>
-      <Ordenacao>
-        Ordenar
-        <Select value={ordem} onChange={handleOrdem}>
-          <option value="">Escolher</option>
-          <option value="a-z">A - Z</option>
-          <option value="z-a">Z - A</option>
-          <option value="menorPreco">Menor Preço</option>
-          <option value="maiorPreco">Maior Preço</option>
-        </Select>
-      </Ordenacao>
-      {renderizaNaTela()}
+      <Info>
+        <div>
+          <p>Quantidade de produtos: {renderizaNaTela().length}</p>
+        </div>
+        <div>
+          Ordenar
+          <Select value={ordem} onChange={handleOrdem}>
+            <option value="">Escolher</option>
+            <option value="a-z">A - Z</option>
+            <option value="z-a">Z - A</option>
+            <option value="menorPreco">Menor Preço</option>
+            <option value="maiorPreco">Maior Preço</option>
+          </Select>
+        </div>
+      </Info>
+      <Cards>{renderizaNaTela()}</Cards>
     </HomeContainer>
   );
 };

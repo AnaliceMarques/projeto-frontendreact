@@ -3,13 +3,14 @@ import styled from "styled-components";
 export const Card = styled.div`
   border: 0.125rem solid var(--deep-blue-secondary);
   border-radius: 1.25rem;
-  width: 15.5rem;
+  width: 15rem;
   height: 18.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
+  margin: 0.25rem;
 
   :hover {
     scale: 1.04;
@@ -26,6 +27,7 @@ export const Imagem = styled.img`
 
 export const Botao = styled.button`
   margin-top: 0.5rem;
+  margin-left: 0.5rem;
   padding: 0.5rem;
   border-radius: 1rem;
   border: none;
@@ -48,4 +50,9 @@ export const Botao = styled.button`
 export const Informacao = styled.div`
   justify-self: start;
   text-align: justify;
+`;
+
+export const Chave = styled.strong`
+  font-family: "Trispace", sans-serif;
+  color: var(--magenta);
 `;

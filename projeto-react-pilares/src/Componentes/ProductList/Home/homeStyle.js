@@ -1,18 +1,31 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1.25rem 1fr 1fr;
-  justify-content: start;
-  align-items: center;
-  gap: 0.75rem;
-  margin: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.125rem;
+  display: flex;
+  flex-direction: column;
 `;
 
-export const Ordenacao = styled.div`
-  grid-column: 3;
-  justify-self: end;
+export const Info = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  @media screen and (max-width: 860px) {
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 429px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
+  }
+`;
+
+export const Cards = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 `;
 
 export const Select = styled.select`

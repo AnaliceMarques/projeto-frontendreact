@@ -5,6 +5,7 @@ export const CartContainer = styled.div`
   margin: 0.5rem;
   border: 0.125rem solid var(--deep-blue-secondary);
   border-radius: 0.5rem;
+  min-width: 225px;
 `;
 
 export const Item = styled.div`
@@ -59,4 +60,9 @@ export const BotaoContador = styled.button`
   width: 1rem;
   font-size: 1.25rem;
   cursor: pointer;
+`;
+
+export const Total = styled.div`
+  display: flex;
+  justify-content: end;
 `;

@@ -1,4 +1,4 @@
-import { FilterContainer, Input } from "./filterStyle";
+import { FilterContainer, Input, CamposDeBusca } from "./filterStyle";
 
 export const Filters = ({
   nameFilter,
@@ -18,22 +18,8 @@ export const Filters = ({
 
   return (
     <FilterContainer>
-      <nav>
-        <h2>Filtros</h2>
-        <br />
-        <label htmlFor="nome">
-          Buscar por Nome:
-          <br />
-          <Input
-            type="text"
-            id="nome"
-            name="nome"
-            placeholder="Digite um nome"
-            value={nameFilter}
-            onChange={handleName}
-          />
-        </label>
-
+      <h2>Filtros</h2>
+      <CamposDeBusca>
         <p>
           <label htmlFor="minimo">
             Valor Mínimo:
@@ -62,7 +48,21 @@ export const Filters = ({
             />
           </label>
         </p>
-      </nav>
+        <p>
+          <label htmlFor="nome">
+            Buscar por Nome:
+            <br />
+            <Input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite um nome"
+              value={nameFilter}
+              onChange={handleName}
+            />
+          </label>
+        </p>
+      </CamposDeBusca>
     </FilterContainer>
   );
 };

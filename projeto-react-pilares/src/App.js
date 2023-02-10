@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 //Array de Produtos - Banco de dados
 import { products } from "./assents/productList";
@@ -9,20 +9,21 @@ import { Cart } from "./Componentes/ShoppingCart/Cart/Cart";
 import { Footer } from "./Componentes/Footer/Footer";
 import { Header } from "./Componentes/Header/Header";
 import { Home } from "./Componentes/ProductList/Home/Home";
-//Renderização de Tela
-// import { HomePage } from "./Componentes/Pages/HomePage";
-// import { DetailsPage } from "./Componentes/Pages/DetailsPage";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
 `;
 
 const Main = styled.main`
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
+  min-height: 72vh;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 function App() {
@@ -33,15 +34,25 @@ function App() {
 
   const [cart, setCart] = useState([]);
 
-  //ESTADO PARA O VALOR TOTAL
-  const [amount, setAmount] = useState("");
+  useEffect(() => {
+    const stringProduct = JSON.stringify(cart);
+    if (cart.length > 0) {
+      localStorage.setItem("carrinho", stringProduct);
+    }
+  }, [cart]);
+
+  useEffect(() => {
+    const getCart = localStorage.getItem("carrinho");
+    const arrayCart = JSON.parse(getCart);
+    if (arrayCart) {
+      setCart(arrayCart);
+    }
+  }, []);
 
   return (
     <Container>
       <GlobalStyle />
       <Header />
-      {/* <HomePage /> */}
-      {/* <DetailsPage /> */}
       <Main>
         <Filters
           nameFilter={nameFilter}
@@ -56,36 +67,13 @@ function App() {
           nameFilter={nameFilter}
           minPriceFilter={minPriceFilter}
           maxPriceFilter={maxPriceFilter}
-          amount={amount}
-          setAmount={setAmount}
           cart={cart}
           setCart={setCart}
         />
-        <Cart
-          cart={cart}
-          setCart={setCart}
-          amount={amount}
-          setAmount={setAmount}
-        />
+        <Cart cart={cart} setCart={setCart} />
       </Main>
       <Footer />
     </Container>
   );
 }
 export default App;
-
-// function increaseCartQuantity(id: number) {
-//     setCartItems((currItems) => {
-//       if (currItems.find((item) => item.id === id) == null) {
-//         return [...currItems, { id, quantity: 1 }];
-//       } else {
-//         return currItems.map((item) => {
-//           if (item.id === id) {
-//             return { ...item, quantity: item.quantity + 1 };
-//           } else {
-//             return item;
-//           }
-//         });
-//       }
-//     });
-//   }
