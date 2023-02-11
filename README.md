@@ -17,6 +17,13 @@ O valor total de cada item e o valor total do carrinho será atualizada a medida
 Caso o usuário atualize a página os itens continuarão no carrinho.
 
 Link para acessar a página:
+http://spaceted.vercel.app
+
+# Descrição
+
+Projeto criado com Create App React e estilizado com styled-components;
+npm install: Instala todas as dependências listadas no package.json;
+npm run start: Roda a aplicação;
 
 # projeto-frontendreact
 
