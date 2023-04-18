@@ -30,6 +30,7 @@ export const Quantidade = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 0.25rem;
 `;
 
 export const Botao = styled.button`
@@ -51,6 +52,9 @@ export const Botao = styled.button`
 export const Contador = styled.div`
   text-align: center;
   color: white;
+  font-size: 0.8rem;
+  border: 1px solid white;
+  border-radius: 0.25rem;
 `;
 
 export const BotaoContador = styled.button`
@@ -58,7 +62,7 @@ export const BotaoContador = styled.button`
   border: none;
   color: white;
   width: 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   cursor: pointer;
 `;
 

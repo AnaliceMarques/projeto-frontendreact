@@ -17,9 +17,12 @@ export const Cart = ({ cart, setCart }) => {
   };
 
   const removerProdutoCart = (produto) => {
-    const listaSemProduto = cart.filter((item) => item !== produto);
+    const listaSemProduto = cart.filter((item) => {
+      return item.id !== produto.id;
+    });
 
     setCart(listaSemProduto);
+    localStorage.setItem("carrinho", JSON.stringify(listaSemProduto));
   };
 
   const adicionarUm = (id) => {

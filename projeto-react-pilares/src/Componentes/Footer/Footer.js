@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FooterContainer,
-  DadosSpaceT,
-  Apresentacao,
-  Link,
-} from "./footerStyle";
+import { FooterContainer, DadosSpaceT, Criacao, Link } from "./footerStyle";
 
 export function Footer() {
   return (
@@ -22,14 +17,14 @@ export function Footer() {
           <p>spacetd@spacetd.com</p>
         </div>
       </DadosSpaceT>
-      <Apresentacao>
+      <Criacao>
+        <p>Desenvolvido por Analice Marques</p>
         <p>
-          Criado por Analice Marques -{" "}
           <a href="https://github.com/AnaliceMarques" target="blank">
             github.com/analicemarques
           </a>
         </p>
-      </Apresentacao>
+      </Criacao>
     </FooterContainer>
   );
 }

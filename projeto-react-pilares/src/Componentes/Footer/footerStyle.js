@@ -9,6 +9,10 @@ export const FooterContainer = styled.footer`
   height: 9rem;
   width: 100%;
   background-color: black;
+
+  @media screen and (max-width: 350px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const DadosSpaceT = styled.div`
@@ -18,8 +22,9 @@ export const DadosSpaceT = styled.div`
   margin: 0 0.5rem 1rem 0.5rem;
 `;
 
-export const Apresentacao = styled.div`
+export const Criacao = styled.div`
   text-align: center;
+  font-size: 0.75rem;
 
   a {
     color: white;

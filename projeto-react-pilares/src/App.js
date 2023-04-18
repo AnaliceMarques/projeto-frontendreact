@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
 import { GlobalStyle } from "./GlobalStyle";
-//Array de Produtos - Banco de dados
-import { products } from "./assents/productList";
-//Meus Componentes
+import { products } from "./assets/productList";
 import { Filters } from "./Componentes/Filters/Filters";
 import { Cart } from "./Componentes/ShoppingCart/Cart/Cart";
 import { Footer } from "./Componentes/Footer/Footer";
