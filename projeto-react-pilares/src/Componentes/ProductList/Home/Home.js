@@ -33,7 +33,7 @@ export const Home = ({
       });
       setCart(novoArray);
     } else {
-      produto.quantity = 1; //adicionando a chave quantity ao objeto product
+      produto.quantity = 1;
       setCart([...cart, produto]);
     }
   };
@@ -107,7 +107,7 @@ export const Home = ({
           <p>Quantidade de produtos: {renderizaNaTela().length}</p>
         </div>
         <div>
-          Ordenar
+          Ordenar:
           <Select value={ordem} onChange={handleOrdem}>
             <option value="">Escolher</option>
             <option value="a-z">A - Z</option>

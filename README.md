@@ -1,20 +1,16 @@
 # Introdução
 
-Space T&D - Travel and Discover é um e-commerce de viagens espaciais, que também oferece uma opção de experiência com a gravidade 0.
+Space T&D - Travel and Discover é um e-commerce que oferece viagens espaciais e uma opção de experiência com a gravidade 0.
 
-Na tela inicial é exibido todos os destinos disponíveis, e o usuário pode filtrar os itens por nome, valor máximo e valor mínimo, e a medida que ocorre o filtro a quantidade de produtos vai sendo atualizada e mostrada na tela. O usuário também pode ordernar os itens em ordem crescente e decrescente de nome e preço e todas essas funcionalidades podem ser utilizadas juntas, e o usuário pode voltar ao início quando desejar.
+Na tela inicial é exibido todas as opções disponíveis, e o usuário pode filtrar os produtos por nome, valor máximo e valor mínimo, e a medida que o usuário vai digitando nos campos de filtragem a quantidade de produtos vai sendo atualizada e mostrada na tela. O usuário também pode ordernar os itens em ordem crescente e decrescente de nome e preço. Os filtros e a ordenação podem ser usados em conjunto e para o usuário voltar a visualização inicial é só limpar os campos de digitação dos filtros e na ordenação deixar na opção "Escolher".
 
-No card que mostra os produtos temos uma imagem representando a viagem/experiência, o nome, o preço, um botão "Detalhes" para verificar as informações e um botão "Adicionar" para adiconar ao carrinho.
+No card que mostra os produtos temos uma imagem representando a viagem/experiência, o nome, o preço, um botão "Detalhes" para verificar os detalhes do produto e um botão "Adicionar" para adiconar ao carrinho.
 
 Quando o botão "Detalhes" for clicado o card será modificado e mostrará o nome, a categoria (viagem ou experiência), a duração, o preço, um botão "Voltar" para voltar para a forma inicial do card e o outro "Adicionar" que também consegue adicionar a viagem no carrinho.
 
-Quando o item for adicionado no carrinho será exibido no carrinho a imagem, o nome e o preço da viagem, e o usuário consegue adicionar mais itens apertando no "+" ou diminuir até remover o item do carrinho apertando no "-", caso o usuário deseje remover o item de uma só vez pode clicar no ícone da lixeira.
+Quando o produto for adicionado no carrinho será exibido na seção do carrinho a imagem, o nome, e o preço do produto, um botão "+" para adicionar mais uma unidade do produto ao carrinho, um botão "-" para remover uma unidade do carrinho, e caso a quantidade esteja em 1 e o usuário clique neste botão, o produto será removido do carrinho, o usuário também pode remover o produto do carrinho clicando no ícone da lixeira, que removerá todo o item do carrinho, independente da quantidade que ele tenha. Também será exibido o valor total de cada produto, considerando a quantidade de cada um e o valor total do carrinho, que será a soma do valor total de todos os produtos.
 
-Cada item tem uma quantidade de vagas disponível e caso o usuário queira adicionar mais itens do que o disponível será exibido um alert avisando que a quantidade máxima foi atingida e que não é possível adicionar mais desse item ao carrinho.
-
-O valor total de cada item e o valor total do carrinho será atualizada a medida que o usuário for adicionando ou removendo os itens do carrinho.
-
-Caso o usuário atualize a página os itens continuarão no carrinho.
+O usuário consegue adicionar mais uma unidade do produto apertando no botão "+" que fica no carrinho ou apertando no botão "Adicionar" que fica no card do produto, cada item tem uma quantidade limite de vagas disponível e caso o usuário queira adicionar mais itens do que o disponível será exibido um alert avisando que a quantidade máxima foi atingida e que não é possível adicionar mais desse item ao carrinho. Caso o usuário atualize a página as informações do carrinho não serão perdidas.
 
 Link para acessar a página:
 http://spaceted.vercel.app

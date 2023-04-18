@@ -9,7 +9,6 @@ export const Filters = ({
   maxPriceFilter,
   setMaxPriceFilter,
 }) => {
-  //Função que captura o valor do nome
   const handleName = (e) => {
     setNameFilter(e.target.value);
   };

@@ -1,12 +1,9 @@
-//importar as imagens
 import BlueEarth from "../image/blue-earth.png";
 import AroundTheMoon from "../image/around-the-moon.png";
 import Iss from "../image/iss.png";
 import SmallStep from "../image/small-step.png";
 import RedPlanet from "../image/red-planet.png";
 import Gravity0 from "../image/gravity0.png";
-
-//Lista de produtos
 
 export const products = [
   {
@@ -58,7 +55,7 @@ export const products = [
     name: "Red Planet",
     category: "Viagem",
     description:
-      "Nessa viagem você irá para Mercúrio e poderá explorar o planeta vermelho e descobrir se existe vida por lá.",
+      "Nessa viagem você irá para Marte e poderá explorar o planeta vermelho e descobrir se existe vida por lá.",
     duration: "5 dias",
     price: 150000000.0,
     image: RedPlanet,
